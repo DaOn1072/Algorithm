@@ -4,17 +4,16 @@ input = sys.stdin.readline
 n = int(input())
 A = list(map(int, input().split()))
 A.sort()
-cnt = 0
+result = 0
 
 for k in range(n):
     find = A[k]
     i = 0
     j = n-1
-    
     while i < j:
         if A[i] + A[j] == find:
             if i != k and j != k:
-                cnt += 1
+                result += 1
                 break
             elif i == k:
                 i += 1
@@ -24,5 +23,4 @@ for k in range(n):
             i += 1
         else:
             j -= 1
-            
-print(cnt)
+print(result)
