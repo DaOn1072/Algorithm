@@ -3,7 +3,7 @@ import sys
 n, m = map(int, sys.stdin.readline().split())
 myList = list(map(int, sys.stdin.readline().split()))
 sumList = [0]
-sum = 0
+sum = 0 
 
 for i in myList:
     sum += i
